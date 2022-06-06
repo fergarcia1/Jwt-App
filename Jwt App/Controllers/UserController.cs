@@ -24,7 +24,7 @@ namespace Jwt_App.Controllers
         }
 
         [HttpGet("Sellers")]
-        [Authorize(Roles = "Seller")] //solo permite que los usuarios con el rol de admin puedan acceder cualquier otro rol seria un 403
+        [Authorize(Roles = "Seller")] //solo permite que los usuarios con el rol de seller puedan acceder cualquier otro rol seria un 403
         public IActionResult SellersEndpoint()
         {
             var currentUser = GetCurrentUser();
